@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": false,        // Не удалять комментарии
+    "sourceMap": true,               // Для отладки
+    "lib": ["ES2020", "DOM"]         // Добавляем поддержку браузера
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

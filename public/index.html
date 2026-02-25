@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧦 Конструктор жаккарда</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧦 Конструктор жаккардовых узоров</h1>
+            <p>Создай свою схему для вязания носков</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="sizeSelect">Размер носка:</label>
+                <select id="sizeSelect">
+                    <option value="56">34-35 (56 петель)</option>
+                    <option value="60" selected>36-37 (60 петель)</option>
+                    <option value="60">38-39 (60 петель)</option>
+                    <option value="64">40-41 (64 петли)</option>
+                    <option value="64">42-43 (64 петли)</option>
+                    <option value="68">44-45 (68 петель)</option>
+                    <option value="72">46-47 (72 петли)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="patternWidth">Ширина раппорта (петель):</label>
+                <input type="number" id="patternWidth" value="10" min="1" max="20">
+            </div>
+
+            <div class="control-group">
+                <label for="patternHeight">Высота раппорта (рядов):</label>
+                <input type="number" id="patternHeight" value="10" min="1" max="20">
+            </div>
+            
+            <div class="control-group">
+                <label for="rowGauge">Плотность (рядов в 10 см):</label>
+                <input type="number" id="rowGauge" value="30" min="20" max="40">
+            </div>
+
+            <div class="control-group">
+                <label for="legLength">Длина паголенка (см):</label>
+                <input type="number" id="legLength" value="15" min="5" max="30">
+            </div>
+        </div>
+
+        <div class="palette">
+            <h3>Выбери цвет:</h3>
+            <div class="colors">
+                <div class="color-item selected" data-color="#ffffff" style="background: #ffffff; border: 2px solid #000;">Фон</div>
+                <div class="color-item" data-color="#ff0000" style="background: #ff0000;"></div>
+                <div class="color-item" data-color="#0000ff" style="background: #0000ff;"></div>
+                <div class="color-item" data-color="#ffff00" style="background: #ffff00;"></div>
+                <div class="color-item" data-color="#00ff00" style="background: #00ff00;"></div>
+                <div class="color-item" data-color="#000000" style="background: #000000;"></div>
+            </div>
+        </div>
+
+        <div class="main-area">
+            <div class="editor">
+                <h3>Редактор схемы</h3>
+                <div id="gridContainer" class="grid-container">
+                    <!-- Сюда TypeScript добавит таблицу -->
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <h3>Информация</h3>
+                <div id="info" class="info-box">
+                    <p>Всего петель: <span id="totalStitches">60</span></p>
+                    <p>Всего рядов: <span id="totalRows">45</span></p>
+                    <p>На спице: <span id="perNeedle">15</span> петель</p>
+                </div>
+                
+                <div id="advice" class="advice-box">
+                    Начни рисовать на сетке!
+                </div>
+
+                <button id="downloadBtn" class="download-btn">📸 Скачать схему</button>
+                <button id="clearBtn" class="clear-btn">🧹 Очистить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/index.js"></script>
+</body>
+</html>
