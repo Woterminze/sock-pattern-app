@@ -201,3 +201,35 @@ button {
 .clear-btn:hover {
     background: #da190b;
 }
+
+.preview-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preview-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#previewCanvas {
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 4px;
+}
+
+.preview-info {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+#repeatsCount {
+    font-weight: bold;
+    color: #4CAF50;
+}

@@ -36,7 +36,6 @@
                 <label for="patternHeight">Высота раппорта (рядов):</label>
                 <input type="number" id="patternHeight" value="10" min="1" max="20">
             </div>
-            
             <div class="control-group">
                 <label for="rowGauge">Плотность (рядов в 10 см):</label>
                 <input type="number" id="rowGauge" value="30" min="20" max="40">
@@ -64,11 +63,40 @@
             <div class="editor">
                 <h3>Редактор схемы</h3>
                 <div id="gridContainer" class="grid-container">
-                    <!-- Сюда TypeScript добавит таблицу -->
                 </div>
             </div>
 
             <div class="info-panel">
+                <!-- НАСТРОЙКИ НОСКА (новые) -->
+                 <div class="sock-settings">
+                    <h3>Настройки носка</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="patternOnLeg" checked> 
+                            Узор на паголенке
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="patternOnFoot" checked> 
+                            Узор на стопе
+                        </label>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="heelColor">Цвет пятки:</label>
+                        <input type="color" id="heelColor" value="#cccccc">
+                    </div>
+                </div>
+                <!-- ПРЕВЬЮ (один!) -->
+                <div class="preview-container">
+                    <h3>Превью носка</h3>
+                    <canvas id="previewCanvas" width="300" height="400" style="border:1px solid #ccc; background: #f9f9f9;"></canvas>
+                    <p class="preview-info">Раппорт повторится <span id="repeatsCount">6</span> раз</p>
+                </div>
+
+                <!-- ИНФОРМАЦИЯ -->
                 <h3>Информация</h3>
                 <div id="info" class="info-box">
                     <p>Всего петель: <span id="totalStitches">60</span></p>
